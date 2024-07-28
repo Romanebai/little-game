@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Duru+Sans&family=Quicksand:wght@300;400;600&family=Special+Elite&display=swap" rel="stylesheet">
+    <title>Pierre Feuille Ciseaux </title>
+</head>
+<body>
+    <main id="main">
+        <h1 id="game-title">Pierre Feuille Ciseaux</h1>
+        <div id="game-result">
+            <div id="win">
+                <h2>Tu as <span>gagné</span> ! </h2>
+            </div>
+            <div id="lose">
+                <h2>Tu as <span>perdu</span> !</h2>
+            </div>
+            <div id="draw">
+                <h2><span>Égalité</span> !</h2>
+            </div>
+        </div>
+
+        <div id="game">
+            <div id="choice-stone">
+                <button disabled class="choice" type="submit">
+                    <img class="choice-image" src="images/pierre.PNG" alt="Pierre" id="stone">
+                </button>
+            </div>
+            <div id="choice-paper">
+                <button disabled class="choice" type="submit">
+                    <img class="choice-image" src="images/feuille.PNG" alt="Feuille">
+                </button>
+            </div>
+            <div id="choice-scissor">
+                <button disabled class="choice" type="submit">
+                    <img class="choice-image" src="images/ciseaux.PNG" alt="Ciseaux">
+                </button>
+            </div>
+        </div>
+
+        <div id="game-begin">
+            <button id="play-button">
+                <h1>Jouer</h1>
+            </button>
+        </div>
+        <div id="result">
+            <p id="game-score">Ton choix:<span> papier <span>& Choix du Robot: </span>papier</p>
+            <p id="score">Moi : 0 & Robot : 0</p>
+        </div>
+
+        <div id="choice-moment">
+            <h2>Cliquez sur votre choix</h2>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 - Romane Baï - Code & Design</h1>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
