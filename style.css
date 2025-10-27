@@ -11,6 +11,13 @@ html, body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+#score {
+    font-size: 20px;
+}
+
+#game-score {
+    font-size: 20px;
+}
 
 #game-title {
     font-size: 40px;

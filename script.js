@@ -1,6 +1,6 @@
-    const stone = document.getElementById('choice-stone');
-    const paper = document.getElementById('choice-paper');
-    const scissors = document.getElementById('choice-scissor');
+    const pierre = document.getElementById('choice-stone');
+    const feuille = document.getElementById('choice-paper');
+    const ciseaux = document.getElementById('choice-scissor');
     const play = document.getElementById('play-button');
     const choiceMoment = document.getElementById('choice-moment');
     const score = document.getElementById('score');
@@ -16,7 +16,7 @@
     let wins = 0;
     let loses = 0;
 
-    const choices = ["stone", "paper", "scissors"];
+    const choices = ["pierre", "feuille", "ciseaux"];
 
     play.addEventListener('click', function () {
         beginGame();
@@ -39,9 +39,9 @@
         const computerChoice = choices[Math.floor(Math.random() * choices.length)];
         console.log(userchoice, computerChoice);
         switch(userchoice + '_' + computerChoice) {
-            case 'paper_scissors':
-            case 'stone_paper':
-            case 'scissors_stone':
+            case 'feuille_ciseaux':
+            case 'pierre_feuille':
+            case 'ciseaux_pierre':
                 loses += 1;
                 gameScore.innerHTML = `Ton choix: <span>${userchoice}</span> & Choix du robot: <span>${computerChoice}</span>`;
                 lose.style.display = 'unset';
@@ -50,9 +50,9 @@
 
                 break;
 
-            case 'paper_stone':
-            case 'stone_scissors':
-            case 'scissors_paper':
+            case 'feuille_pierre':
+            case 'pierre_ciseaux':
+            case 'ciseaux_feuille':
                 wins += 1;
                 gameScore.innerHTML = `Ton choix: <span>${userchoice}</span> & Choix du robot: <span>${computerChoice}</span>`;
                 win.style.display = 'unset';
@@ -60,9 +60,9 @@
                 draw.style.display = 'none';
                 break;
 
-            case 'paper_paper':
-            case 'stone_stone':
-            case 'scissors_scissors':
+            case 'feuille_feuille':
+            case 'pierre_pierre':
+            case 'ciseaux_ciseaux':
                 gameScore.innerHTML = `Ton choix: <span>${userchoice}</span> & Choix du robot: <span>${computerChoice}</span>`;
                 draw.style.display = 'unset';
                 win.style.display = 'none';
@@ -74,7 +74,7 @@
         score.innerHTML = `<span>Moi:</span> ${wins} & <span>Robot:</span> ${loses}`;
     };
 
-    stone.addEventListener('click', () => runGame('stone'));
-    paper.addEventListener('click', () => runGame('paper'));
-    scissors.addEventListener('click', () => runGame('scissors'));
+    pierre.addEventListener('click', () => runGame('pierre'));
+    feuille.addEventListener('click', () => runGame('feuille'));
+    ciseaux.addEventListener('click', () => runGame('ciseaux'));
     
